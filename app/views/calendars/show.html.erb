@@ -9,11 +9,12 @@
             <% @available_periods.each do |period| %>
                 <div class="d-flex flex-column bg-light border mb-2 pt-1 pl-2">
                 <%= label_tag "slot_#{period.start.time.strftime('%Y-%m-%d_%H%M')}" do %>
-                    <%= radio_button_tag :slot, [[period.start.time.strftime("%Y-%m-%dT%H:%MZ")], [period.end.time.strftime("%Y-%m-%dT%H:%MZ")]], checked = false, {id: "slot_#{period.start.time.strftime('%Y-%m-%d_%H%M')}"} %>
+                    <%= form.radio_button :slot, period.start.time.strftime("%Y-%m-%d_%H:%M") %>
                     <span><%= period.start.time.strftime("%Y-%m-%d %H:%M") %> - <%= period.end.time.strftime("%H:%M") %></span>
                 <% end %>
                 </div>
             <% end %>
+            <%= form.hidden_field :duration_minutes, value: @duration_minutes %>
             <%= button_to "Create event", { action: "create" }, class: "btn btn-primary" %>
         <% end %>
     </div>
