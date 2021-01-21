@@ -1,8 +1,8 @@
-class CalendarsController < UsersController
-before_action :preload_client
+class CalendarsController < ApplicationController
+  before_action :preload_cronofy
 
     def show
-      sub = User.first.account_id
+      sub = user.account_id
       time = Time.new(2021, 1, 23).change({ hour: 9 })
       id = [params[:id]]
       @duration_minutes = 60
@@ -53,6 +53,10 @@ before_action :preload_client
     }
 
     @cronofy.upsert_event(calendar_id, @event_data)
+  end
+
+  def preload_cronofy
+    @cronfy = cronofy_client(User.first)
   end
 
 end

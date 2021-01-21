@@ -9988,3 +9988,194 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 395ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 6732)
 
 
+Started GET "/calendars/cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg" for 127.0.0.1 at 2021-01-21 17:15:47 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>"cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `cronofy_client'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `cronofy_client'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms | Allocations: 7918)
+
+
+  
+NoMethodError (undefined method `availability' for nil:NilClass):
+  
+app/controllers/calendars_controller.rb:38:in `show'
+Started GET "/calendars/cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg" for 127.0.0.1 at 2021-01-21 17:16:19 +0000
+Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>"cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `cronofy_client'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `cronofy_client'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.7ms | Allocations: 6886)
+
+
+  
+NoMethodError (undefined method `availability' for nil:NilClass):
+  
+app/controllers/calendars_controller.rb:38:in `show'
+Started GET "/calendars/cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg" for 127.0.0.1 at 2021-01-21 17:16:28 +0000
+Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>"cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `cronofy_client'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `cronofy_client'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.5ms | Allocations: 6623)
+
+
+  
+NoMethodError (undefined method `availability' for nil:NilClass):
+  
+app/controllers/calendars_controller.rb:38:in `show'
+Started GET "/calendars/cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg" for 127.0.0.1 at 2021-01-21 17:16:35 +0000
+Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>"cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `cronofy_client'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `cronofy_client'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.7ms | Allocations: 6642)
+
+
+  
+NoMethodError (undefined method `availability' for nil:NilClass):
+  
+app/controllers/calendars_controller.rb:38:in `show'
+Started GET "/calendars/cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg" for 127.0.0.1 at 2021-01-21 17:17:05 +0000
+Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>"cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `cronofy_client'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `cronofy_client'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms | Allocations: 6639)
+
+
+  
+NoMethodError (undefined method `availability' for nil:NilClass):
+  
+app/controllers/calendars_controller.rb:38:in `show'
+Started POST "/__web_console/repl_sessions/b35b6330b2a3d7c1126a6840033f60d3/trace" for 127.0.0.1 at 2021-01-21 17:17:10 +0000
+Started GET "/calendars/cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg" for 127.0.0.1 at 2021-01-21 17:18:18 +0000
+Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>"cal_X@R-MbQIYgD6hBR8_AjdfLrkW7uSm8zbApYvTkg"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/calendars_controller.rb:4:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `cronofy_client'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `cronofy_client'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.7ms | Allocations: 6617)
+
+
+  
+NoMethodError (undefined method `availability' for nil:NilClass):
+  
+app/controllers/calendars_controller.rb:38:in `show'
+Started GET "/" for 127.0.0.1 at 2021-01-21 17:18:28 +0000
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 509)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:4:in `cronofy_client'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2021-01-21 17:21:24 +0000
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 6ms (Allocations: 948)
+
+
+  
+Cronofy::CredentialsMissingError (No credentials supplied):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2021-01-21 17:22:17 +0000
+  
+SyntaxError (/Users/shannonwalker/Documents/code/Developer-Demo-Ruby/app/controllers/users_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/users_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for 127.0.0.1 at 2021-01-21 17:22:26 +0000
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 951)
+
+
+  
+NoMethodError (undefined method `user_auth_link' for nil:NilClass):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2021-01-21 17:23:12 +0000
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.4ms | Allocations: 5164)
+
+
+  
+Cronofy::CredentialsMissingError (No credentials supplied):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2021-01-21 17:23:26 +0000
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `cronofy_client'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `cronofy_client'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 293)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 5384)
+Completed 200 OK in 608ms (Views: 57.1ms | ActiveRecord: 1.6ms | Allocations: 14352)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-21 17:28:35 +0000
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 3438)
+Completed 200 OK in 49ms (Views: 26.4ms | ActiveRecord: 2.2ms | Allocations: 8526)
+
+

@@ -1,6 +1,24 @@
 class ApplicationController < ActionController::Base
     rescue_from Cronofy::AuthenticationFailureError, with: :refresh_access_token
 
+    def cronofy_client(user = nil)
+        client_id =     Rails.application.credentials[:cronofy][:client_id]
+        client_secret = Rails.application.credentials[:cronofy][:client_secret]
+        if user 
+            Cronofy::Client.new(
+                client_id:     client_id,
+                client_secret: client_secret,
+                access_token: User.first.access_token,
+                refresh_token: User.first.refresh_token
+            )
+        else 
+            Cronofy::Client.new(
+                client_id:     client_id,
+                client_secret: client_secret
+            )
+        end
+    end
+
     private
     def refresh_access_token
         client_id =     Rails.application.credentials[:cronofy][:client_id]
@@ -8,12 +26,7 @@ class ApplicationController < ActionController::Base
 
         @user = User.first
 
-        @cronofy = Cronofy::Client.new(
-        client_id:     client_id,
-        client_secret: client_secret,
-        access_token:  @user.access_token,
-        refresh_token: @user.refresh_token
-        )
+        @cronofy = cronofy_client(@user)
 
         response = @cronofy.refresh_access_token
 
