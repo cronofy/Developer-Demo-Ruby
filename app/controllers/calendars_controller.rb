@@ -2,9 +2,9 @@ class CalendarsController < ApplicationController
   before_action :preload_cronofy
 
     def show
-      sub = user.account_id
-      time = Time.new(2021, 1, 23).change({ hour: 9 })
-      id = [params[:id]]
+      sub = @user.account_id
+      time = Time.now + 1.days
+      @calendar = [params[:id]]
       @duration_minutes = 60
 
       @request = {
@@ -12,11 +12,9 @@ class CalendarsController < ApplicationController
           {
             "members": [
               {
-                "sub": sub,
-                "calendar_ids": id
+                "sub": sub
               }
             ],
-            "required": "all"
           }
         ],
         "response_format": "slots",
@@ -27,8 +25,8 @@ class CalendarsController < ApplicationController
             "end": time.change({ hour: 17 })
           },
           {
-            "start": time.change({ day: 24, hour: 9 }),
-            "end": time.change({ day: 24, hour: 17 })
+            "start": time.change({hour: 9 }) + 1.days,
+            "end": time.change({hour: 17 }) + 1.days
           }
         ]
       }
@@ -56,7 +54,8 @@ class CalendarsController < ApplicationController
   end
 
   def preload_cronofy
-    @cronfy = cronofy_client(User.first)
+    @user = User.first
+    @cronofy = cronofy_client(User.first)
   end
 
 end

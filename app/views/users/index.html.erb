@@ -2,7 +2,7 @@
     <div class="card-header d-flex justify-content-between">
         <h1>Cronofy Rails Demo</h1>
         <div class="pt-2">
-            <%= link_to 'Connect a calendar', @authorization_url, class: 'btn btn-primary' %>
+            <%= link_to "Connect a calendar", @authorization_url, class: "btn btn-primary" %>
         </div>
     </div>
 
@@ -12,7 +12,7 @@
     <div class="row bg-light border mb-2 p-2">
         <div class="col-auto pt-1"><strong>Profile name:</strong> <%= calendar.profile_name %></div>
         <div class="col-auto pt-1"><strong>Calendar provider:</strong> <%= calendar.provider_name %></div>
-        <div class="col-auto"><a href='/calendars/<%= calendar.calendar_id %>' class='btn btn-secondary'>View availability</a></div>
+        <div class="col-auto"><%= link_to 'View availability', calendar_path(calendar.calendar_id), class: "btn btn-secondary" %></div>
     </div>
     <% end %>
     </div>
