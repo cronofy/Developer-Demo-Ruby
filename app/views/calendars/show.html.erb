@@ -4,19 +4,6 @@
     </div>
 
     <div class="card-body">
-        <p>Please select a slot for your event:</p>
-        <%= form_with do |form| %>
-            <% @available_periods.each do |period| %>
-                <div class="d-flex flex-column bg-light border mb-2 pt-1 pl-2">
-                <%= label_tag "slot_#{period.start.time.strftime('%Y-%m-%d_%H%M')}" do %>
-                    <%= form.radio_button :slot, period.start.time.strftime("%Y-%m-%d_%H:%M") %>
-                    <span><%= period.start.time.strftime("%Y-%m-%d %H:%M") %> - <%= period.end.time.strftime("%H:%M") %></span>
-                <% end %>
-                </div>
-            <% end %>
-            <%= form.hidden_field :duration_minutes, value: @duration_minutes %>
-            <%= button_to "Create event", { action: "create" }, class: "btn btn-primary" %>
-        <% end %>
     </div>
 </section>
 
