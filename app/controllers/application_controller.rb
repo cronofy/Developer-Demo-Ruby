@@ -31,12 +31,10 @@ class ApplicationController < ActionController::Base
         response = @cronofy.refresh_access_token
 
         if User.where(refresh_token: response.refresh_token).exists?
-        user = User.find_by(refresh_token: response.refresh_token)
-        user.update(access_token: response.access_token)
-        user.save
-        redirect_to root_path    
-        else 
+          user = User.find_by(refresh_token: response.refresh_token)
+          user.update(access_token: response.access_token)
+          user.save
+        end 
         redirect_to root_path
-        end
     end
 end

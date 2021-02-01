@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
 
-    def index       
-         
-    end
+  def index
 
-    def connect
+  end
 
-    end
+  def connect
+    
+  end
 
 end
