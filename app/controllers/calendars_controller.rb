@@ -1,38 +1,38 @@
 class CalendarsController < ApplicationController
   before_action :preload_cronofy
 
-    def show
-      sub = @user.account_id
-      time = Time.now + 1.days
-      @calendar = [params[:id]]
-      @duration_minutes = 60
+  def show
+    sub = @user.account_id
+    time = Time.now + 1.days
+    @calendar = [params[:id]]
+    @duration_minutes = 60
 
-      @request = {
-        "participants": [
-          {
-            "members": [
-              {
-                "sub": sub
-              }
-            ],
-          }
-        ],
-        "response_format": "slots",
-        "required_duration": { "minutes": @duration_minutes },
-        "available_periods": [
-          {
-            "start": time.change({ hour: 9 }),
-            "end": time.change({ hour: 17 })
-          },
-          {
-            "start": time.change({hour: 9 }) + 1.days,
-            "end": time.change({hour: 17 }) + 1.days
-          }
-        ]
-      }
+    @request = {
+      "participants": [
+        {
+          "members": [
+            {
+              "sub": sub
+            }
+          ]
+        }
+      ],
+      "response_format": 'slots',
+      "required_duration": { "minutes": @duration_minutes },
+      "available_periods": [
+        {
+          "start": time.change({ hour: 9 }),
+          "end": time.change({ hour: 17 })
+        },
+        {
+          "start": time.change({ hour: 9 }) + 1.days,
+          "end": time.change({ hour: 17 }) + 1.days
+        }
+      ]
+    }
 
-      @available_periods = @cronofy.availability(@request)
-    end
+    @available_periods = @cronofy.availability(@request)
+  end
 
   def create
     calendar_id = params[:id]
@@ -46,7 +46,7 @@ class CalendarsController < ApplicationController
       start: start_time,
       end: end_time,
       location: {
-        description: "Meeting room"
+        description: 'Meeting room'
       }
     }
 
@@ -57,5 +57,4 @@ class CalendarsController < ApplicationController
     @user = User.first
     @cronofy = cronofy_client(User.first)
   end
-
 end
