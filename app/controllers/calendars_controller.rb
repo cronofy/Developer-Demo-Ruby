@@ -1,8 +1,8 @@
 class CalendarsController < ApplicationController
 
-    def show
+  def show
 
-    end
+  end
 
   def create
 
