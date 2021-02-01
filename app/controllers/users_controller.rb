@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       user.update(access_token: response.access_token, refresh_token: response.refresh_token)
       user.save
     else
-      user = User.create(account_id: response.account_id, access_token: response.access_token,
+      User.create(account_id: response.account_id, access_token: response.access_token,
                          refresh_token: response.refresh_token)
     end
 
