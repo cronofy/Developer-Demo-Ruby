@@ -19,6 +19,9 @@ cronofy:
   client_secret: CLIENT_SECRET_GOES_HERE
 ```
 
+> If you are struggling to save the credentials within the credentials.yml.enc file you may need to run EDITOR="code --wait" rails credentials:edit. Replace code with your editor of choice, or leave the value as code for VSCode.
+
 * Run `bundler install`: this will install the required dependencies.
+* Run `rails db:migrate RAILS_ENV=development` to create the local db
 * Run `rails s` to start the server.
 * You can then view the running application at http://localhost:3000/.
