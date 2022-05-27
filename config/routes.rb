@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get '/calendars/:id', to: 'calendars#show', as: 'calendar'
   post '/calendars/:id', to: 'calendars#create'
 
-  get 'oauth2/callback', to: 'user#connect'
+  get 'oauth2/callback', to: 'users#connect'
 end
