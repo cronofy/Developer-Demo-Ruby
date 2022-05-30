@@ -9,6 +9,8 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+/log/
+.DS_Store
 
 # Used by dotenv library to load environment variables.
 # .env
@@ -59,3 +61,8 @@ node_modules
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/credentials.yml.enc
+
+# Ignore persistance objects to prevent leaking of user access_tokens/refresh_tokens
+/db/development.sqlite3
+/db/schema.rb
+/db/seeds.rb

@@ -11,6 +11,7 @@ This repo contains two branches: `starter`, and `main`.
 
   1. Clone this repository.
   1. `cd` into this repository's root directory.
+  1. Run `bundler install` - this will install the required dependencies.
   1. Run `rails credentials:edit` to open `config/credentials.yml.enc` and add the following:
 
 ```
@@ -19,6 +20,8 @@ cronofy:
   client_secret: CLIENT_SECRET_GOES_HERE
 ```
 
-* Run `bundler install`: this will install the required dependencies.
+> If you are struggling to save the credentials within the credentials.yml.enc file you may need to run EDITOR="code --wait" rails credentials:edit. Replace code with your editor of choice, or leave the value as code for VSCode.
+
+* Run `rails db:migrate RAILS_ENV=development` to create the local db
 * Run `rails s` to start the server.
 * You can then view the running application at http://localhost:3000/.
