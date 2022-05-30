@@ -10,8 +10,8 @@
     <p><strong>Connected calendars:</strong></p>
     <% @calendars.each do |calendar| %>
     <div class="row bg-light border mb-2 p-2">
-        <div class="col-auto pt-1"><strong>Profile name:</strong> <%= calendar.profile_name %></div>
-        <div class="col-auto pt-1"><strong>Calendar provider:</strong> <%= calendar.provider_name %></div>
+        <div class="col-auto pt-1"><strong>Profile:</strong> <%= calendar.profile_name %> (<%= calendar.provider_name %>) </div>
+        <div class="col-auto pt-1"><strong>Calendar name:</strong> <%= calendar.calendar_name %></div>
         <div class="col-auto"><%= link_to 'View availability', calendar_path(calendar.calendar_id), class: "btn btn-secondary" %></div>
     </div>
     <% end %>
