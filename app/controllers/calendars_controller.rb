@@ -4,7 +4,7 @@ class CalendarsController < ApplicationController
   def show
     sub = @user.account_id
     time = Time.now + 1.days
-    @calendar = [params[:id]]
+    @calendar_ids = [params[:id]]
     @duration_minutes = 60
 
     @request = {
@@ -12,7 +12,8 @@ class CalendarsController < ApplicationController
         {
           "members": [
             {
-              "sub": sub
+              "sub": sub,
+              "calendar_ids": @calendar_ids,
             }
           ]
         }
