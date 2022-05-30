@@ -10,6 +10,8 @@
 /test/version_tmp/
 /tmp/
 /log/
+.DS_Store
+.tool-versions
 
 # Used by dotenv library to load environment variables.
 # .env
