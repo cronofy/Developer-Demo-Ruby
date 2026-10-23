@@ -1,34 +1,31 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.6'
-gem 'jbuilder', '~> 2.7'
-gem 'puma', '~> 5.6'
-gem 'rails', '~> 6.1.1'
-gem 'sass-rails', '>= 6'
-gem 'sqlite3', '~> 1.4'
-gem 'turbolinks', '~> 5'
-gem 'webpacker', '~> 5.0'
-
-gem 'bootsnap', '>= 1.4.4', require: false
+ruby '4.0.7'
+gem 'bootsnap', require: false
+gem 'importmap-rails'
+gem 'jbuilder'
+gem 'propshaft'
+gem 'puma'
+gem 'rails', '~> 8.1.4'
+gem 'sqlite3'
+gem 'turbo-rails'
 
 gem 'cronofy'
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: %i[mri windows]
 end
 
 group :development do
-  gem 'listen', '~> 3.3'
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'listen'
+  gem 'rack-mini-profiler'
   gem 'rubocop'
-  gem 'web-console', '>= 4.1.0'
+  gem 'web-console'
 end
 
 group :test do
-  gem 'capybara', '>= 3.26'
+  gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
 
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i[windows jruby]

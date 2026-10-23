@@ -66,3 +66,10 @@ node_modules
 /db/development.sqlite3
 /db/schema.rb
 /db/seeds.rb
+
+# Ignore key files for decrypting credentials and more.
+/config/*.key
+
+
+/public/assets
+/db/test.sqlite3

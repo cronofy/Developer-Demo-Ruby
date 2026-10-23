@@ -7,6 +7,11 @@ This repo contains two branches: `starter`, and `main`.
 * The starter code you need to follow along with the tutorial is on the `starter` branch. Checkout this branch if you want to work through the tutorial step-by-step.
 * The completed code for the tutorial is on the `main` branch. Checkout this branch if you want to view the full, finished code for the tutorial.
 
+## Requirements
+
+* Ruby 4.0.7 (see `.tool-versions`)
+* No Node.js or Yarn required - JavaScript is served via import maps.
+
 ## Quickstart guide
 
   1. Clone this repository.
